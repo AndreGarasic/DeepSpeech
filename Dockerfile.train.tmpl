@@ -1,9 +1,12 @@
 # Please refer to the TRAINING documentation, "Basic Dockerfile for training"
 
-FROM tensorflow/tensorflow:1.15.4
+FROM tensorflow/tensorflow:1.15.4-gpu-py3
 ENV DEBIAN_FRONTEND=noninteractive \
     DEEPSPEECH_REPO=https://github.com/AndreGarasic/DeepSpeech.git \
     DEEPSPEECH_SHA=master
+
+RUN rm /etc/apt/sources.list.d/cuda.list
+RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-utils \
@@ -58,4 +61,4 @@ RUN wget -O - https://gitlab.com/libeigen/eigen/-/archive/3.3.8/eigen-3.3.8.tar.
 
 WORKDIR /DeepSpeech
 
-RUN ./bin/run-ldc93s1.sh
+RUN ["chmod", "+x", "./bin/run-andre.sh"]
