@@ -6,8 +6,8 @@ if [ ! -f DeepSpeech.py ]; then
 fi;
 
 if [ ! -f "data/ldc93s1/ldc93s1.csv" ]; then
-    echo "Downloading and preprocessing LDC93S1 example data, saving in ./data/ldc93s1."
-    python -u bin/import_ldc93s1.py ./data/ldc93s1
+    #echo "Downloading and preprocessing LDC93S1 example data, saving in ./data/ldc93s1."
+    #python -u bin/import_ldc93s1.py ./data/ldc93s1
 fi;
 
 if [ -d "${COMPUTE_KEEP_DIR}" ]; then
