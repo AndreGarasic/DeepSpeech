@@ -21,7 +21,7 @@ python -u DeepSpeech.py --noshow_progressbar \
   --test_files data/data/test1/test_excel.csv \
   --train_batch_size 1 \
   --test_batch_size 1 \
-  --n_hidden 100 \
+  --n_hidden 50 \
   --epochs 200 \
   --checkpoint_dir "$checkpoint_dir" \
   "$@"
