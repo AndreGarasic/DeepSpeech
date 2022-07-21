@@ -20,8 +20,10 @@ def _download_and_preprocess_data(data_dir):
     print("podaci koji ns zanimaju")
     print("local")
     print(local_file)
+    print(type(local_file))
     print("trans")
     print(trans_file)
+    print(type(trans_file))
 
     with open(trans_file, "r") as fin:
         transcript = " ".join(fin.read().strip().lower().split(" ")[2:]).replace(
