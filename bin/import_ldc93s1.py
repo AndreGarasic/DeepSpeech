@@ -46,7 +46,7 @@ import pandas
 ##./data/ldc93s1/LDC93S1.txt
 ##<class 'str'>
 df = pandas.DataFrame(
-    data=[(os.path.abspath('./data/test1/test_audio.wav'), os.path.getsize('./data/test1/test_audio.wav'), 'Upali ledice')],
+    data=[(os.path.abspath('C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1/test_audio.wav'),os.path.getsize('C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1/test_audio.wav'),'Upali ledice')],
     columns=["wav_filename", "wav_filesize", "transcript"],
 )
-df.to_csv(os.path.join('./data/test1', "test.csv"), index=False)
+df.to_csv('C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1/izlaz.csv', index=False)
