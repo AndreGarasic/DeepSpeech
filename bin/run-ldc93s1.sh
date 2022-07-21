@@ -8,7 +8,7 @@ set -xe
 if [ ! -f "data/test1/izlaz.csv" ]; then
     echo "Downloading and preprocessing LDC93S1 example data, saving in ./data/ldc93s1."
     python -u bin/import_ldc93s1.py ./data/test1
-fi;
+fi
 #
 #if [ -d "${COMPUTE_KEEP_DIR}" ]; then
 #    checkpoint_dir=$COMPUTE_KEEP_DIR
