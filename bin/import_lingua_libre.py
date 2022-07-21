@@ -33,15 +33,15 @@ ARCHIVE_NAME = "Q{qId}-{iso639_3}-{language_English_name}.zip"
 ARCHIVE_URL = "https://lingualibre.fr/datasets/" + ARCHIVE_NAME
 
 
-def _download_and_preprocess_data(target_dir):
-    # Making path absolute
-    target_dir = os.path.abspath(target_dir)
-    # Conditionally download data
-    archive_path = maybe_download(ARCHIVE_NAME, target_dir, ARCHIVE_URL)
-    # Conditionally extract data
-    _maybe_extract(target_dir, ARCHIVE_DIR_NAME, archive_path)
-    # Produce CSV files and convert ogg data to wav
-    _maybe_convert_sets(target_dir, ARCHIVE_DIR_NAME)
+#def _download_and_preprocess_data(target_dir):
+#    # Making path absolute
+#    target_dir = os.path.abspath(target_dir)
+#    # Conditionally download data
+#    archive_path = maybe_download(ARCHIVE_NAME, target_dir, ARCHIVE_URL)
+#    # Conditionally extract data
+#    _maybe_extract(target_dir, ARCHIVE_DIR_NAME, archive_path)
+#    # Produce CSV files and convert ogg data to wav
+#    _maybe_convert_sets(target_dir, ARCHIVE_DIR_NAME)
 
 
 def _maybe_extract(target_dir, extracted_data, archive_path):
