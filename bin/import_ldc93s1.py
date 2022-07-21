@@ -49,4 +49,4 @@ df = pandas.DataFrame(
     data=[(os.path.abspath('C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1/test_audio.wav'),os.path.getsize('C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1/test_audio.wav'),'Upali ledice')],
     columns=["wav_filename", "wav_filesize", "transcript"],
 )
-df.to_csv('C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1/izlaz.csv', index=False)
+df.to_csv(os.path.join("C:/Users/Korisnik/Desktop/deepsc/DeepSpeech/data/test1", "izlaz.csv"), index=False)
