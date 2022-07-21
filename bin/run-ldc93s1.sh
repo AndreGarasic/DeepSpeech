@@ -5,10 +5,10 @@ set -xe
 #    exit 1
 #fi;
 #
-#if [ ! -f "data/ldc93s1/ldc93s1.csv" ]; then
-#    echo "Downloading and preprocessing LDC93S1 example data, saving in ./data/ldc93s1."
-#    python -u bin/import_ldc93s1.py ./data/ldc93s1
-#fi;
+if [ ! -f "data/test1/izlaz.csv" ]; then
+    echo "Downloading and preprocessing LDC93S1 example data, saving in ./data/ldc93s1."
+    python -u bin/import_ldc93s1.py ./data/test1
+fi;
 #
 #if [ -d "${COMPUTE_KEEP_DIR}" ]; then
 #    checkpoint_dir=$COMPUTE_KEEP_DIR
@@ -25,5 +25,5 @@ python -u DeepSpeech.py --noshow_progressbar \
   --test_files data/test1/izlaz.csv \
   --train_batch_size 1 \
   --test_batch_size 1 \
-  --n_hidden 100 \
-  --epochs 200 \
+  --n_hidden 50 \
+  --epochs 100 \
