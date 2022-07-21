@@ -2,7 +2,7 @@
 import os
 import sys
 
-import pandas
+mport pandas
 
 from deepspeech_training.util.downloader import maybe_download
 
@@ -35,7 +35,18 @@ def _download_and_preprocess_data(data_dir):
         columns=["wav_filename", "wav_filesize", "transcript"],
     )
     df.to_csv(os.path.join(data_dir, "ldc93s1.csv"), index=False)
-
-
+print("data")
+print(data_dir)
+print(type(data_dir))
 if __name__ == "__main__":
     _download_and_preprocess_data(sys.argv[1])
+#./data/ldc93s1/LDC93S1.wav
+#<class 'str'>
+#trans
+#./data/ldc93s1/LDC93S1.txt
+#<class 'str'>
+#df = pandas.DataFrame(
+#    data=[(os.path.abspath('./data/test1/test_audio.wav'), os.path.getsize('./data/test1/test_audio.wav'), 'Upali ledice')],
+#    columns=["wav_filename", "wav_filesize", "transcript"],
+#)
+#df.to_csv(os.path.join(data_dir, "ldc93s1.csv"), index=False)
