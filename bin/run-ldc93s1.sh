@@ -21,8 +21,8 @@ fi
 export CUDA_VISIBLE_DEVICES=0
 
 python -u DeepSpeech.py --noshow_progressbar \
-  --train_files data/test1/izlaz.csv \
-  --test_files data/test1/izlaz.csv \
+  --train_files data/test1/izlaz1.csv \
+  --test_files data/test1/izlaz1.csv \
   --train_batch_size 1 \
   --test_batch_size 1 \
   --n_hidden 50 \
