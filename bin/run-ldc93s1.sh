@@ -15,6 +15,20 @@ fi
 #else
 #    checkpoint_dir=$(python -c 'from xdg import BaseDirectory as xdg; print(xdg.save_data_path("deepspeech/ldc93s1"))')
 #fi
+# We should try to minimise forks, especially on Windows where they are
+# unreasonably slow, so skip the feature probes when bash or zsh are
+# being used:
+if test set = "${BASH_VERSION+set}${ZSH_VERSION+set}"; then
+  : ${_G_HAVE_ARITH_OP="yes"}
+  : ${_G_HAVE_XSI_OPS="yes"}
+  # The += operator was introduced in bash 3.1
+  case $BASH_VERSION in
+    [12].* | 3.0 | 3.0*) ;;
+    *)
+      : ${_G_HAVE_PLUSEQ_OP="yes"}
+      ;;
+  esac
+fi
 
 # Force only one visible device because we have a single-sample dataset
 # and when trying to run on multiple devices (like GPUs), this will break
