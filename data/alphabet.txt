@@ -6,7 +6,11 @@
 a
 b
 c
+č
+ć
 d
+dž
+đ
 e
 f
 g
@@ -15,19 +19,18 @@ i
 j
 k
 l
+lj
 m
 n
+nj
 o
 p
-q
 r
 s
+š
 t
 u
 v
-w
-x
-y
 z
-'
+ž
 # The last (non-comment) line needs to end with a newline.
